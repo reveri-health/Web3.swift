@@ -4,10 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "MagicSDK-Web3",
-    platforms: [
-       .iOS(.v10),
-       .macOS(.v10_12)
-    ],
+    platforms: [.iOS(.v16)],
     products: [
         .library(
             name: "MagicSDK_Web3",
@@ -21,16 +18,16 @@ let package = Package(
     ],
     dependencies: [
         // Core dependencies
-        .package(url: "https://github.com/attaswift/BigInt.git", from: "5.0.0"),
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.0.0"),
-        .package(name: "secp256k1", url: "https://github.com/Boilertalk/secp256k1.swift.git", from: "0.1.1"),
+        .package(url: "https://github.com/attaswift/BigInt.git", from: "5.6.0"),
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", from: "1.9.0"),
+        .package(name: "secp256k1", url: "https://github.com/Boilertalk/secp256k1.swift.git", from: "0.1.7"),
 
         // PromiseKit dependency
-        .package(url: "https://github.com/mxcl/PromiseKit.git", from: "6.0.0"),
+        .package(url: "https://github.com/mxcl/PromiseKit.git", from: "8.2.0"),
 
         // Test dependencies
-        .package(url: "https://github.com/Quick/Quick.git", from: "3.0.0"),
-        .package(url: "https://github.com/Quick/Nimble.git", from: "8.1.2"),
+        .package(url: "https://github.com/Quick/Quick.git", from: "7.6.2"),
+        .package(url: "https://github.com/Quick/Nimble.git", from: "13.7.1"),
     ],
     targets: [
         .target(
